@@ -1,0 +1,60 @@
+.footer_wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(4,1fr) !important;
+    width: 100%;
+    padding: 100px 10%;
+    min-height: 40vh;
+    background: url(./../../Assets/contactbg2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    position: relative;
+}
+
+.footer_wrapper::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, #000, transparent);
+    z-index: -1;
+}
+
+.footerLinks {
+    width: 100%;
+}
+
+.footerLinks h2{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-family: 'Bonheur Royale';
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.footerLinks p{
+    margin: 15px 0;
+}
+
+.footerLinks p a{
+    color: rgb(182, 181, 181);
+    font-size: 18px;
+}
+
+.footerLinks p:hover a{
+    color: #fff;
+}
+
+@media screen and (max-width:900px) {
+    .footer_wrapper{
+        grid-template-columns: repeat(2,1fr) !important;
+}
+}
+
+@media screen and (max-width:500px) {
+    .footer_wrapper{
+        grid-template-columns: repeat(1,1fr) !important;
+}
+}

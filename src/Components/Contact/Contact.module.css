@@ -1,0 +1,210 @@
+.contact_wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 100px 10%;
+  gap: 60px;
+  background-color: #ffffff;
+  background-size: cover;
+  font-family: 'Inter', sans-serif;
+}
+
+.Reservation {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 60vh;
+  background: url(./../../Assets/footerbg.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  outline: 2px dashed #9b804e;
+  outline-offset: -10px;
+}
+
+.Reservation::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.Reservation img{
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.Reservation h2 {
+  width: 80%;
+  font-size: 58px;
+  font-family: 'Bonheur Royale', cursive;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  padding: 0 10px;
+}
+
+.Reservation button {
+  height: 45px;
+  width: 180px;
+  font-size: 14px;
+  border-radius: 0px;
+  border: none;
+  background: #9b804e;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  outline: 2px dashed #fff;
+  outline-offset: -4px;
+}
+
+.Reservation button:hover {
+  transform: scale(0.96);
+  background-color: #b5965e;
+}
+
+.Reservation button:active {
+  transform: scale(0.92);
+}
+
+.form {
+  width: 60%;
+}
+
+.form h2 {
+  font-size: 42px;
+  font-family: 'Bonheur Royale', cursive;
+  font-weight: 300;
+  color: #181818;
+  margin-bottom: 10px;
+}
+
+.form p {
+  width: 95%;
+  font-size: 16px;
+  color: #4d4d4d;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.input_container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.input_wrapper {
+  flex: 1 1 45%;
+  height: 55px;
+  margin-bottom: 20px;
+}
+
+.input_wrapper input,
+textarea {
+  width: 100%;
+  height: 100%;
+  padding: 0 18px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-family: inherit;
+  outline: none;
+  transition: 0.3s ease;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+.input_wrapper input:focus,
+textarea:focus {
+  border-color: #9b804e;
+  box-shadow: 0 0 0 2px rgba(155, 128, 78, 0.2);
+}
+
+textarea {
+  height: 200px;
+  padding-top: 15px;
+  resize: none;
+  margin-top: 5px;
+  border-radius: 12px;
+}
+
+.form button {
+  height: 50px;
+  width: 180px;
+  font-size: 16px;
+  border-radius: 0px;
+  border: none;
+  background: #9b804e;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  outline: 2px dashed #e2e2e2;
+  outline-offset: -5px;
+  margin-top: 30px;
+}
+
+.form button:hover {
+  transform: scale(0.96);
+  background-color: #b5965e;
+}
+
+.form button:active {
+  transform: scale(0.92);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .contact_wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 5%;
+  }
+
+  .Reservation {
+    width: 100%;
+    border-radius: 18px;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .form p {
+    width: 100%;
+  }
+
+  .input_wrapper {
+    flex: 1 1 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Reservation h2 {
+    font-size: 40px;
+  }
+
+  .form h2 {
+    font-size: 36px;
+  }
+
+  .form p {
+    font-size: 15px;
+  }
+
+  .input_wrapper {
+    height: 50px;
+  }
+
+  .form button,
+  .Reservation button {
+    width: 100%;
+  }
+}

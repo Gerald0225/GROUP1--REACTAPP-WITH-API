@@ -1,0 +1,91 @@
+.Testimonial_wrapper{
+    align-items: center;
+    padding: 100px 10%;
+    background-color: #ffffff;
+}
+
+.Testimonial_title{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.Testimonial_title h2{
+    font-size: 70px;
+    font-family: 'Bonheur Royale';
+    font-weight: 200;
+}
+
+.Testimonial_title p{
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.Testimonial_cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.Testimonial_cards .card{
+    background-color: rgb(251, 241, 232);
+    padding: 30px;
+
+    outline: 2px dashed #9b804e;
+    outline-offset: -10px;
+}
+
+.Testimonial_cards .card p{
+    font-size: 18px;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: start;
+}
+
+.Testimonial_cards .card .profile{
+    display: flex;
+    gap: 15px;
+    position: relative;
+}
+
+.Testimonial_cards .card .profile i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 60px;
+    color: #9b804e;
+}
+
+.Testimonial_cards .card .profile img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.Testimonial_cards .card .profile h2{
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Inter';
+}
+
+.Testimonial_cards .card .profile h2 span{
+    display: block;
+    margin-top: 8px;
+    text-align: start;
+    font-size: 16px;
+}
+
+@media screen and (max-width:1200px) {
+    .Testimonial_cards{
+        grid-template-columns: repeat(2,1fr);
+}
+}
+
+@media screen and (max-width:500px) {
+    .Testimonial_cards{
+        grid-template-columns: repeat(1,1fr);
+}
+}

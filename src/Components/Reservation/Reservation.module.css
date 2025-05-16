@@ -1,0 +1,99 @@
+/* Reservation.module.css */
+.reservationWrapper {
+  background: url('../../Assets/homebackground.png') no-repeat center center/cover;
+  padding: 4rem 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.heading {
+  font-size: 70px;
+  font-family: 'Bonheur Royale';
+  font-weight: 200;
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3rem;
+  border-radius: 30px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px); /* adds the blur effect */
+  -webkit-backdrop-filter: blur(10px); /* for Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.inputGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputField label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.inputField input,
+.inputField select {
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  border: 2px solid ;
+  border-radius: 30px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.inputField input:focus,
+.inputField select:focus {
+  border-color: #9b804e;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.submitBtn {
+    height: 50px;
+    width: 240px;
+    padding: 0 22px;
+    font-size: 15px;
+    border-radius: 30px;
+    border: none;
+    background: #9b804e;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    outline: 1px dashed #e2e2e2;
+    outline-offset: -4px;
+}
+
+.submitBtn button:hover {
+    transform: scale(0.97);
+    background-color: #b19660;
+}
+
+.submitBtn button:active {
+    transform: scale(0.9);
+}

@@ -1,0 +1,101 @@
+.join {
+  background-image: url('../../Assets/joinbg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 180px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.joinContent h2 {
+  font-size: 80px;
+  font-family: 'Bonheur Royale', cursive;
+  font-weight: 200;
+  color: #181818;
+  margin-bottom: 20px;
+}
+
+.joinText {
+  font-size: 18px;
+  color: #4d4d4d;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1 1 45%;
+  font-size: 16px;
+  color: #333;
+}
+
+.icon {
+  font-size: 24px;
+  color: #9b804e;
+}
+
+.joinBtn button {
+  height: 50px;
+  width: 180px;
+  font-size: 16px;
+  border-radius: 0px;
+  border: none;
+  background: #9b804e;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  outline: 2px dashed #e2e2e2;
+  outline-offset: -4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.joinBtn button:hover {
+  transform: scale(0.96);
+  background-color: #b5965e;
+}
+
+.joinBtn button:active {
+  transform: scale(0.92);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .joinContent {
+    padding: 30px;
+  }
+
+  .joinContent h2 {
+    font-size: 36px;
+  }
+
+  .joinText {
+    font-size: 16px;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .feature {
+    flex: 1 1 100%;
+  }
+
+  .joinBtn button {
+    width: 100%;
+  }
+}

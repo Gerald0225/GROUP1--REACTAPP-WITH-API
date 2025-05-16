@@ -1,0 +1,106 @@
+.hotelWrapper{
+    align-items: center;
+    padding: 100px 10%;
+    background-color: #ffffff;
+}
+
+.hotelTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hotelTitle h2{
+    font-size: 70px;
+    font-family: 'Bonheur Royale';
+    font-weight: 200;
+}
+
+.hotelCards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.hotelCards .hotelCard{
+    width: 100%;
+    position: relative;
+}
+
+.hotelCards .hotelCard .hotelImage{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hotelCards .hotelCard .hotelImage::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #000, transparent);
+    border-radius: 12px;
+
+}
+
+.hotelCards .hotelCard .hotelImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    transition: .6s;
+}
+
+.hotelCards .hotelCard:hover .hotelImage img{
+    transform: scale(1.5);
+
+}
+
+.hotelCards .hotelCard .hotelCardinfo {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hotelCards .hotelCard .hotelCardinfo p{
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.hotelCards .hotelCard .hotelCardinfo h2{
+    color: #ffffff;
+    font-size: 33px;
+    font-family: 'Bonheur Royale';
+    font-weight: 300;
+}
+
+.hotelCards .hotelCard .price{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding: 5px 10px;
+    background-color: #9b804e;
+    color: #fff;
+    outline: 1px dashed #fff;
+    outline-offset: -3px;
+}
+
+@media screen and (max-width:1200px) {
+    .hotelCards {
+        grid-template-columns: repeat(2,1fr);
+}
+}
+
+@media screen and (max-width:500px) {
+    .hotelCards {
+        grid-template-columns: repeat(1,1fr);
+}
+}
