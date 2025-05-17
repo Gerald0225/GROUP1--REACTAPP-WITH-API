@@ -77,7 +77,7 @@
     width: 100%;
 }
 
-.navBtn {
+.navBtn{
     display: flex;
     align-items: center;
     gap: 15px;
@@ -116,6 +116,31 @@
     cursor: pointer;
     display: none;
 }
+
+.logoutBtn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 8px;
+}
+.logoutBtn:hover {
+  text-decoration: underline;
+}
+
+
+.logoutBtn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px;
+}
+
+
 
 .bars span {
     height: 12px;
