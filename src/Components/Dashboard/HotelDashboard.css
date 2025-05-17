@@ -19,7 +19,6 @@ h1 {
 .dashboard-container {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   padding: 30px;
-  padding: 100px 10%;
   color: #222;
 }
 
@@ -78,13 +77,12 @@ h1 {
 .profile-card {
   background-color: #2c3e50; /* Dark background for profile card */
   border-radius: 10px;
-  padding: 20px;
+  padding: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 280px;
   justify-content: center;
 }
 
@@ -114,7 +112,7 @@ h1 {
 /* Sidebar Toggle Arrow Button */
 .toggle-btn {
   position: absolute;
-  top: 20px;
+  top: 80px;
   left: 20px;
   background-color: transparent;
   color: white;
@@ -129,22 +127,6 @@ h1 {
 
 /* Toggle button styling */
 
-.toggle-btn {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: transparent;
-  color: white;
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-  z-index: 1000;
-  transition: transform 0.3s ease;
-}
-
-.toggle-btn.open {
-  transform: rotate(90deg);
-}
 
 /* Card Grid (Top section) */
 .top-grid {
@@ -390,7 +372,7 @@ th, td {
 }
 
 .home-btn {
-  background: linear-gradient(to right, #4CAF50, #2ecc71);
+  background: linear-gradient(to right, #9b804e, #ad9058);
   color: white;
   border: none;
   padding: 12px 20px;
@@ -409,7 +391,7 @@ th, td {
 }
 
 .home-btn:hover {
-  background: linear-gradient(to right, #45a049, #27ae60);
+  background: linear-gradient(to right, #9b804e, #a78b57);
   transform: translateY(-10px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
