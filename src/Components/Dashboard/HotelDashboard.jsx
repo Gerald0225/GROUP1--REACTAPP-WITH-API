@@ -1,23 +1,36 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HotelDashboard.css';
 import RoomStatusChart from './RoomStatusChart';
+import { useAuth } from '../../Context/AuthContext'; // AuthContext for logout
 
 const HotelDashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const navigate = useNavigate();
+  const { logout } = useAuth(); // Use context logout
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  return (
-    
-    <div className="dashboard-container">
+  const handleLogout = () => {
+    logout(); // Update auth context
+    alert('You have been logged out.');
+    navigate('/register'); // Redirect to register after logout
+  };
 
+  const handleBackToHome = () => {
+    navigate('/');
+  };
+
+  return (
+    <div className="dashboard-container">
       <h1>Dashboard</h1>
       <p className="subtext">
         Monitor the current status of the hotel, including arrivals, departures, and room status.
       </p>
 
+      {/* TOP GRID SECTION */}
       <div className="top-grid">
         <div className="status-card improved">
           <h3>Current in House</h3>
@@ -56,10 +69,11 @@ const HotelDashboard = () => {
         </div>
       </div>
 
+      {/* BOTTOM GRID SECTION */}
       <div className="bottom-grid">
-        <div class="current-status-card">
+        <div className="current-status-card">
           <h3>Current Status</h3>
-          <table class="modern-status-table">
+          <table className="modern-status-table">
             <thead>
               <tr>
                 <th>Room</th>
@@ -93,40 +107,41 @@ const HotelDashboard = () => {
         </div>
       </div>
 
-      {/* Settings Sidebar */}
+      {/* SETTINGS SIDEBAR */}
       <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-content">
-          {/* Profile Section */}
-            <div className="profile-section">
-              <div className="profile-card">
-                <div className="profile-image">
-                  <img src="https://i.pravatar.cc/80" alt="Default User" />
-                </div>
-                <div className="profile-info">
-                  <h3>Guest User</h3>
-                  <p>guest@example.com</p>
-                </div>
+          <div className="profile-section">
+            <div className="profile-card">
+              <div className="profile-image">
+                <img src="https://i.pravatar.cc/80" alt="Default User" />
+              </div>
+              <div className="profile-info">
+                <h3>Guest User</h3>
+                <p>guest@example.com</p>
               </div>
             </div>
-          {/* Settings Options */}
+          </div>
+
           <div className="sidebar-content">
             <h2>Settings</h2>
             <ul className="sidebar-list">
               <li><button className="sidebar-btn">Profile</button></li>
               <li><button className="sidebar-btn">Notifications</button></li>
               <li><button className="sidebar-btn">Privacy</button></li>
-              <li><button className="sidebar-btn">Logout</button></li>
+              <li><button className="sidebar-btn" onClick={handleLogout}>Logout</button></li>
             </ul>
           </div>
-          <div class="sidebar-footer">
-            <button class="home-btn">
-              <i class="fas fa-home"></i>
+
+          <div className="sidebar-footer">
+            <button className="home-btn" onClick={handleBackToHome}>
+              <i className="fas fa-home"></i>
               <span>Back to Home</span>
             </button>
           </div>
         </div>
       </div>
-      {/* Toggle Button */}
+
+      {/* TOGGLE SIDEBAR GEAR */}
       <button className={`toggle-btn ${isSidebarOpen ? 'open' : ''}`} onClick={toggleSidebar}>
         &#9881;
       </button>
