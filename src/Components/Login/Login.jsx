@@ -2,9 +2,12 @@ import { FaLock, FaUser } from "react-icons/fa";
 import "./Login.css";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
+import { useAuth } from "../../Context/AuthContext";
 
 function Login() {
   const navigate = useNavigate();
+  const { login } = useAuth(); // Get login method from context
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -23,7 +26,8 @@ function Login() {
       savedUser.password === password
     ) {
       alert("Login successful!");
-      navigate("/"); // or go to dashboard
+      login(); // ✅ Mark as logged in globally
+      navigate("/dashboard"); // Redirect to dashboard
     } else {
       alert("Incorrect username or password.");
     }
