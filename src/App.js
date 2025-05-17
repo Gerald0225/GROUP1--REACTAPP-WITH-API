@@ -1,5 +1,11 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+  Navigate
+} from 'react-router-dom';
 
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home';
@@ -19,14 +25,27 @@ import Login from './Components/Login/Login';
 import About from './Components/About/about';
 import FAQ from './Components/FAQ/FAQ';
 
+import { AuthProvider, useAuth } from './Context/AuthContext';
+
+// 🔒 Protect Dashboard for authenticated users
+function PrivateRoute({ children }) {
+  const { isAuthenticated } = useAuth();
+  return isAuthenticated ? children : <Navigate to="/login" replace />;
+}
+
+// 🧠 Handles conditional rendering of Navbar/Footer
 function AppRoutes() {
   const location = useLocation();
+
+  const hideNavbarRoutes = ['/dashboard'];
   const hideFooterRoutes = ['/reservation', '/dashboard', '/register', '/login'];
+
+  const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
   const shouldHideFooter = hideFooterRoutes.includes(location.pathname);
 
   return (
     <div className="App">
-      <Navbar />
+      {!shouldHideNavbar && <Navbar />}
 
       <Routes>
         <Route
@@ -48,7 +67,14 @@ function AppRoutes() {
         <Route path="/mission-vision" element={<About />} />
         <Route path="/blogs" element={<Vlogs />} />
         <Route path="/reservation" element={<Reservation />} />
-        <Route path="/dashboard" element={<HotelDashboard />} />
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <HotelDashboard />
+            </PrivateRoute>
+          }
+        />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>
@@ -58,11 +84,14 @@ function AppRoutes() {
   );
 }
 
+// 🔁 Root App with Auth context and router
 function App() {
   return (
-    <Router>
-      <AppRoutes />
-    </Router>
+    <AuthProvider>
+      <Router>
+        <AppRoutes />
+      </Router>
+    </AuthProvider>
   );
 }
 
