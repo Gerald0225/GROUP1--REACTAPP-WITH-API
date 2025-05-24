@@ -6,7 +6,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const RoomStatusChart = () => {
   const data = {
-    labels: ['Occupied Room 58', 'Block Room 7'],
+    labels: ['Occupied Room 0', 'Block Room 7'],
     datasets: [
       {
         data: [58, 7],
@@ -30,7 +30,7 @@ const RoomStatusChart = () => {
       <Doughnut data={data} options={options} />
       <div className="room-status-label">
         <p><strong>Occupied</strong></p>
-        <p>58 Rooms</p>
+        <p>0 Rooms</p>
       </div>
     </div>
   );
