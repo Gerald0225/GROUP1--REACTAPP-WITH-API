@@ -20,6 +20,7 @@ h1 {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   padding: 30px;
   color: #222;
+  background: rgba(3, 3, 3, 0.7);
 }
 
 /* Sidebar */
@@ -157,13 +158,13 @@ h1 {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-.status-card.improved h3 {
+.status-card h3 {
   font-size: 17px;
   font-weight: 600;
   color:rgb(255, 255, 255);
   margin-bottom: 15px;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .card-content {
@@ -346,7 +347,7 @@ th, td {
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
   justify-content: center;
 }
 
