@@ -15,7 +15,6 @@ const HotelDashboard = () => {
 
   const handleLogout = () => {
     logout(); // Update auth context
-    alert('You have been logged out.');
     navigate('/register'); // Redirect to register after logout
   };
 
@@ -35,36 +34,36 @@ const HotelDashboard = () => {
         <div className="status-card improved">
           <h3>Current in House</h3>
           <div className="card-content">
-            <div className="card-number">59</div>
+            <div className="card-number">0</div>
             <div className="card-label">Rooms</div>
-            <div className="card-subtext">Total Pax: 137</div>
+            <div className="card-subtext">Total Pax: 0</div>
           </div>
         </div>
 
         <div className="status-card improved">
           <h3>Expected Arrivals</h3>
           <div className="card-content">
-            <div className="card-number">8</div>
+            <div className="card-number">0</div>
             <div className="card-label">Rooms</div>
-            <div className="card-subtext">Total Pax: 20</div>
+            <div className="card-subtext">Total Pax: 0</div>
           </div>
         </div>
 
         <div className="status-card improved">
           <h3>Expected Departures</h3>
           <div className="card-content">
-            <div className="card-number">16</div>
+            <div className="card-number">0</div>
             <div className="card-label">Rooms</div>
-            <div className="card-subtext">Total Pax: 32</div>
+            <div className="card-subtext">Total Pax: 0</div>
           </div>
         </div>
 
         <div className="status-card improved">
           <h3>End of Day</h3>
           <div className="card-content">
-            <div className="card-number">51</div>
+            <div className="card-number">0</div>
             <div className="card-label">Rooms</div>
-            <div className="card-subtext">Total Pax: 125</div>
+            <div className="card-subtext">Total Pax: 0</div>
           </div>
         </div>
       </div>
@@ -84,18 +83,18 @@ const HotelDashboard = () => {
             <tbody>
               <tr>
                 <td>Start of Day</td>
-                <td>58</td>
-                <td>96.67%</td>
+                <td>0</td>
+                <td>0%</td>
               </tr>
               <tr>
                 <td>Realized Arrivals</td>
-                <td>1</td>
-                <td>1.67%</td>
+                <td>0</td>
+                <td>0%</td>
               </tr>
               <tr>
                 <td>Remaining Departures</td>
-                <td>5</td>
-                <td>3.93%</td>
+                <td>0</td>
+                <td>0%</td>
               </tr>
             </tbody>
           </table>
