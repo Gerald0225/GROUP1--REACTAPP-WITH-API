@@ -44,12 +44,12 @@
 }
 
 .faq-category.active {
-  background-color: #9b804e;
+  background-color: #1a6c50;
   color: #fff;
 }
 
 .faq-contact-box {
-  background-color: #9b804e;
+  background-color: #1a6c50;
   color: white;
   padding: 1.2rem;
   border-radius: 8px;
@@ -60,7 +60,7 @@
 .chat-icon {
   font-size: 2rem;
   background: #fff;
-  color: #9b804e;
+  color: #1a6c50;
   border-radius: 50%;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
@@ -69,7 +69,7 @@
 .contact-btn {
   margin-top: 1rem;
   background: #fff;
-  color: #9b804e;
+  color: #1a6c50;
   border: none;
   padding: 0.4rem 1rem;
   font-style: italic;
@@ -95,7 +95,7 @@
 
 .phone-icon {
   font-size: 1.4rem;
-  color: #9b804e;
+  color: #1a6c50;
 }
 
 .support-label {
@@ -128,8 +128,8 @@
 }
 
 .faq-item.active {
-  border-color: #9b804e;
-  background-color: #9b804e;
+  border-color: #1a6c50;
+  background-color: #1a6c50;
   color: #fff;
 }
 
@@ -144,13 +144,13 @@
 }
 
 .faq-item.active .faq-question {
-  background: #9b804e;
+  background: #1a6c50;
   color: white;
 }
 
 .faq-answer {
   padding: 1rem;
-  background: #9b804e;
+  background: #1a6c50;
   color: white;
   font-size: 0.95rem;
   border-top: 1px solid #fff;
