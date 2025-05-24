@@ -25,7 +25,6 @@ function Login() {
       savedUser.username === username &&
       savedUser.password === password
     ) {
-      alert("Login successful!");
       login(); // ✅ Mark as logged in globally
       navigate("/dashboard"); // Redirect to dashboard
     } else {
